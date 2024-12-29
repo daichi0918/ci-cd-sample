@@ -6,7 +6,11 @@ export const env = createEnv({
     /**
      * T3 Env テスト用のURL
      */
-    DEBUG_URL: z.string().url(),
+    DEBUG_URL: z
+      .string()
+      .url()
+      .optional()
+      .default("http://localhost:8000/test"),
     /**
      * 環境
      */
